@@ -1,0 +1,29 @@
+ALGORITHM algo 
+VAR
+    n_m,n_v,n_c: integer:= 0;
+    ph:STRING;
+    v:char:=["a","e","o","y","i","u"];
+ BEGIN
+    repeat
+        read(ph)
+    while (ph[ph.length] = ".") 
+
+    FOR i FROM 0 TO ph.Length STEP 1  DO 
+
+            IF (f[i]=" " or f[i]=".")THEN
+                n_m :=n_m+1;
+            END_IF
+        FOR j FROM 0 TO ph.Length STEP 1  DO 
+            IF (f[i] = v[j]) THEN
+                n_v :=n_v+1;
+            END_IF
+        END_FOR
+        IF (f[i] <> " ") THEN
+                n_c :=n_c+1;
+            END_IF
+    END_FOR
+    write("phrase"+ph)
+    write("nombre des mots : "+n_m)
+    write("nombre des voyelle : "+n_v)
+    write("nombre des caractere : "+n_c)
+END
